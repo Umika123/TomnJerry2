@@ -22,7 +22,7 @@ function setup(){
 
     cat = createSprite(700,650)
     cat.addAnimation("catStart",catImg1)
-    cat.scale= 0.1
+    cat.scale= 0.2
 }
 
 function draw() {
@@ -39,13 +39,13 @@ cat.scale = 0.2
 cat.changeAnimation("catRunning")
 
 mouse.addAnimation("mouseFinal", mouseImg4)
-mouse.scale = 0.2
+mouse.scale = 0.1
 mouse.changeAnimation("mouseFinal")
 
 
 
 
-    }
+}
     drawSprites();
 } 
 
@@ -53,17 +53,16 @@ mouse.changeAnimation("mouseFinal")
 function keyPressed(){
 
   //For moving and changing animation write code here
-if(keyCode=== RIGHT_ARROW){
-    mouse.addAnimation("mouseTeasing", mouseImg2)
-    mouse.changeAnimation("mouseTeasing")
-    mouse.frameDelay =25
-}
+
 
 if(keyCode=== LEFT_ARROW){
     cat.addAnimation("catMoving", catImg2)
     cat.changeAnimation("catMoving")
     cat.frameDelay= 25
-    cat.velocityX = -1
+    cat.velocityX = -2
+    mouse.addAnimation("mouseTeasing", mouseImg2)
+    mouse.changeAnimation("mouseTeasing")
+    mouse.frameDelay =25
 }
 
 
